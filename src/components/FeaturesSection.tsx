@@ -22,7 +22,7 @@ const features = [
 const FeaturesSection: React.FC = () => {
   return (
     <section id="features" className="bg-white py-20">
-      <div className="container mx-auto px-6 text-center">
+      <div className="container mx-auto px-6 max-w-6xl text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
           Key Features
         </h2>
@@ -30,11 +30,11 @@ const FeaturesSection: React.FC = () => {
           {features.map((feature) => (
             <div
               key={feature.name}
-              className="p-6 border rounded-lg shadow hover:shadow-lg transition"
+              className="p-6 border rounded-lg shadow hover:shadow-lg hover:scale-105 transition-transform"
             >
               <feature.icon className="h-12 w-12 mx-auto text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold mb-2">{feature.name}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <p className="text-gray-700">{feature.description}</p>
             </div>
           ))}
         </div>
