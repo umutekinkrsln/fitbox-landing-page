@@ -24,7 +24,7 @@ Showcasing FitBox: an AI-powered kickboxing trainer with real-time motion analys
 ## Installation
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/fitbox-landing-page.git
+git clone https://github.com/umutekinkrsln/fitbox-landing-page.git
 
 # Navigate into the project
 cd fitbox-landing-page
