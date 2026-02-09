@@ -34,3 +34,6 @@ npm install
 
 # Start development server
 npm run dev
+
+## Live Demo
+[View the project on Vercel](https://fitbox-landing-page.vercel.app/)
