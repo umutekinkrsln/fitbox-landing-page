@@ -5,13 +5,31 @@ const ContactForm: React.FC = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log({ name, email, message });
-    alert("Message submitted successfully!");
-    setName("");
-    setEmail("");
-    setMessage("");
+
+    try {
+      const response = await fetch("https://fitbox-backend-production-aec7.up.railway.app/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Backend error: " + response.statusText);
+      }
+
+      const data = await response.json();
+      console.log("Backend response:", data);
+
+      alert("Message submitted successfully!");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Failed to submit message.");
+    }
   };
 
   return (
