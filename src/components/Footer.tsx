@@ -1,18 +1,33 @@
 import React from "react";
+import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white py-6 text-center relative">
       <div className="flex justify-center space-x-6 mb-4">
-        <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors duration-300">
-          <svg className="h-6 w-6 hover:animate-bounce" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M..." />
-          </svg>
+        <a
+          href="https://instagram.com/umuttkrslnn"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-pink-500 transition-colors duration-300"
+        >
+          <FaInstagram className="h-6 w-6 hover:animate-bounce" />
         </a>
-        <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors duration-300">
-          <svg className="h-6 w-6 hover:animate-bounce" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M..." />
-          </svg>
+        <a
+          href="https://www.linkedin.com/in/umut-ekin-karaslan-8a59bb2b4/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-blue-500 transition-colors duration-300"
+        >
+          <FaLinkedin className="h-6 w-6 hover:animate-bounce" />
+        </a>
+        <a
+          href="https://github.com/umutekinkrsln"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-gray-200 transition-colors duration-300"
+        >
+          <FaGithub className="h-6 w-6 hover:animate-bounce" />
         </a>
       </div>
       <p className="text-sm">
