@@ -39,7 +39,7 @@ const FAQSection: React.FC = () => {
             <div key={index} className="mb-4 border-b">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left py-4 flex justify-between items-center focus:outline-none"
+                className="w-full text-left py-4 flex justify-between items-center focus:outline-none hover:bg-gray-50 transition-colors duration-200"
               >
                 <span className="font-semibold text-white">{faq.question}</span>
                 <ChevronDownIcon
