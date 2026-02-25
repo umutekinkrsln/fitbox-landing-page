@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion"; 
+//import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 const faqs = [
   {
@@ -42,9 +44,19 @@ const FAQSection: React.FC = () => {
                 <span className="font-semibold text-white">{faq.question}</span>
                 <span>{openIndex === index ? "-" : "+"}</span>
               </button>
-              {openIndex === index && (
-                <p className="text-gray-600 pb-4">{faq.answer}</p>
-              )}
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.p
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="text-gray-600 pb-4"
+                  >
+                     {faq.answer}
+                  </motion.p>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>
