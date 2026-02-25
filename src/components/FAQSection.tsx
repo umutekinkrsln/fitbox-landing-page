@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion"; 
-//import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 const faqs = [
   {
@@ -42,7 +42,11 @@ const FAQSection: React.FC = () => {
                 className="w-full text-left py-4 flex justify-between items-center focus:outline-none"
               >
                 <span className="font-semibold text-white">{faq.question}</span>
-                <span>{openIndex === index ? "-" : "+"}</span>
+                <ChevronDownIcon
+                  className={`h-5 w-5 text-gray-600 transform transition-transform duration-300 ${
+                    openIndex === index ? "rotate-180" : ""
+                  }`}
+                />
               </button>
               <AnimatePresence>
                 {openIndex === index && (
