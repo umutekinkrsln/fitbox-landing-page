@@ -36,7 +36,7 @@ const FeaturesSection: React.FC = () => {
              whileInView={{ opacity: 1, y: 0 }} 
              transition={{ duration: 0.6, delay: index * 0.2 }} 
              viewport={{ once: true }} 
-             className="p-6 border rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out" 
+             className="className="p-6 border rounded-xl bg-white/50 backdrop-blur-md shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-out" 
              >
 
               <feature.icon className="h-12 w-12 mx-auto text-blue-600 mb-4 animate-pulse" />
