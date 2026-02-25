@@ -39,7 +39,7 @@ const FeaturesSection: React.FC = () => {
              className="p-6 border rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out" 
              >
 
-              <feature.icon className="h-12 w-12 mx-auto text-blue-600 mb-4" />
+              <feature.icon className="h-12 w-12 mx-auto text-blue-600 mb-4 animate-pulse" />
               <h3 className="text-xl font-semibold mb-2">{feature.name}</h3>
               <p className="text-gray-700">{feature.description}</p>
             </motion.div>
