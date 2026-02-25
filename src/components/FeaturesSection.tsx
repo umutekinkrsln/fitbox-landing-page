@@ -1,5 +1,7 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { SparklesIcon, DevicePhoneMobileIcon, ChartBarIcon } from "@heroicons/react/24/outline";
+
 
 const features = [
   {
@@ -27,15 +29,20 @@ const FeaturesSection: React.FC = () => {
           Key Features
         </h2>
         <div className="grid gap-10 md:grid-cols-3">
-          {features.map((feature) => (
-            <div
-              key={feature.name}
-              className="p-6 border rounded-lg shadow hover:shadow-lg hover:scale-105 transition-transform"
-            >
+          {features.map((feature, index) => (
+            <motion.div
+             key={feature.name} 
+             initial={{ opacity: 0, y: 50 }} 
+             whileInView={{ opacity: 1, y: 0 }} 
+             transition={{ duration: 0.6, delay: index * 0.2 }} 
+             viewport={{ once: true }} 
+             className="p-6 border rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out" 
+             >
+
               <feature.icon className="h-12 w-12 mx-auto text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold mb-2">{feature.name}</h3>
               <p className="text-gray-700">{feature.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
