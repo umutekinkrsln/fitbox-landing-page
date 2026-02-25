@@ -1,28 +1,28 @@
-# FitBox – AI-Powered Kickboxing Trainer
-
-A modern landing page built with **React, TypeScript, Vite, and Tailwind CSS**.  
+FitBox – AI-Powered Kickboxing Trainer
+A modern landing page built with React, TypeScript, Vite, and Tailwind CSS.
 Showcasing FitBox: an AI-powered kickboxing trainer with real-time motion analysis, portability, and personalized feedback.
 
----
+Features
+Hero Banner with CTA buttons
 
-## Features
-- Hero Banner with CTA buttons
-- Features Section with responsive cards
-- FAQ Section with accordion functionality
-- Contact Form with validation
-- Responsive design and modern UI
+Features Section with responsive cards
 
----
+FAQ Section with accordion functionality
 
-## Tech Stack
-- **Frontend:** React, TypeScript, Vite
-- **Styling:** Tailwind CSS, Heroicons
-- **Backend (planned):** Spring Boot + H2 Database (for contact form submissions)
+Contact Form with validation (integrated with backend API)
 
----
+Responsive design and modern UI
 
-## Installation
-```bash
+Tech Stack
+Frontend: React, TypeScript, Vite
+
+Styling: Tailwind CSS, Heroicons
+
+Backend: Spring Boot + H2 Database (for contact form submissions)
+
+Deployment: Vercel (frontend) + Railway (backend)
+
+Installation
 # Clone the repository
 git clone https://github.com/umutekinkrsln/fitbox-landing-page.git
 
@@ -35,5 +35,7 @@ npm install
 # Start development server
 npm run dev
 
-## Live Demo
-[View the project on Vercel](https://fitbox-landing-page.vercel.app/)
+Deployment
+Frontend (Vercel): https://fitbox-landing-page.vercel.app
+
+Backend (Railway): https://fitbox-backend-production-aec7.up.railway.app/api/contact (fitbox-backend-production-aec7.up.railway.app in Bing)
